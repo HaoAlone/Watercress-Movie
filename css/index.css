@@ -1,0 +1,136 @@
+
+  /*<!--reset-->*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body {
+  height: 100%;
+}
+body {
+  font-size: 12px;
+  line-height: 1.2;
+  background: #fff;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+main {
+  height: calc(100vh - 50px);
+  /*background: green;*/
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;/*ios上增加弹性*/
+}
+main > section {
+  display: none;
+}
+main > section:first-child {
+  display: block;
+}
+/*
+  item movie
+*/
+.item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+.item > a {
+  display: block;
+  display: flex;
+}
+.item .cover,
+.item .cover img{
+  width: 70px;
+}
+.item .detail {
+  flex: 1;
+  padding-left: 10px;
+}
+.item .detail h2 {
+  font-size: 16px;
+}
+.item .detail .extra {
+  color: #999;
+  margin-top: 4px;
+}
+.item .detail .score {
+  color: #FF5773;
+}
+/*
+  底部切换览
+*/
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  /*background: red;*/
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+footer > div {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+}
+footer > .active {
+  color: #FF5722;
+}
+footer > div > span {
+  display: block;
+  padding: 5px;
+}
+/*
+  搜索
+*/
+section .search-content{
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  /*border: 1px solid red;*/
+}
+section .search-content input {
+  font-size: 16px;
+  width: calc(100% - 60px);
+  padding: 8px;
+  background-color: #eee;
+  border: none;
+  border-radius: 2px;
+  box-shadow: none;
+  outline: none;
+}
+section .search-content span{
+  font-size: 16px;
+
+  position: absolute;
+  right: 0;
+  padding: 8px 10px;
+  background: #FF5722;
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+/*
+  loading
+*/
+.loading {
+  text-align: center;
+  padding: 5px;
+  display: none;
+}
+.loading .icon-loading {
+  display: inline-block;
+  animation: 1s rotate linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
